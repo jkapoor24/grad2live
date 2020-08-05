@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grad2live_login/ui/signup_screen.dart';
+import 'ui/edupreneur_screen.dart';
+import 'ui/experience_screen.dart';
 import 'ui/home.dart';
 import 'ui/forgot_screen.dart';
 
@@ -12,7 +14,9 @@ void main() {
       routes: {
         HomePage.id: (context) => HomePage(),
         ForgotScreen.id: (context) => ForgotScreen(),
-        SignupScreen.id: (context) => SignupScreen()
+        SignupScreen.id: (context) => SignupScreen(),
+        EdupreneurScreen.id: (context) => EdupreneurScreen(),
+        ExperienceScreen.id: (context) => ExperienceScreen()
       },
     ),
   );

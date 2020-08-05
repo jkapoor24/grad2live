@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:grad2live_login/ui/forgot_screen.dart';
 import 'package:grad2live_login/ui/signup_screen.dart';
+import 'package:grad2live_login/ui/edupreneur_screen.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = 'home_page';
@@ -274,6 +275,18 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, EdupreneurScreen.id);
+              },
+              child: Text(
+                "Become an Edupreneur",
+                style: TextStyle(
+                    color: Colors.deepOrange,
+                    fontSize: 17.0,
+                    fontWeight: FontWeight.w700),
+              ),
+            )
           ],
         ),
       ),
