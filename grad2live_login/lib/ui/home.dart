@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:grad2live_login/ui/calllogs_screen.dart';
 import 'package:grad2live_login/ui/forgot_screen.dart';
 import 'package:grad2live_login/ui/signup_screen.dart';
 import 'package:grad2live_login/ui/edupreneur_screen.dart';
@@ -286,7 +287,28 @@ class _HomePageState extends State<HomePage> {
                     fontSize: 17.0,
                     fontWeight: FontWeight.w700),
               ),
-            )
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  decoration: BoxDecoration(
+                      color: Colors.deepOrange,
+                      borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                  child: FlatButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, CalllogsScreen.id);
+                    },
+                    child: Icon(
+                      Icons.call,
+                      color: Colors.white,
+                      size: 20.0,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

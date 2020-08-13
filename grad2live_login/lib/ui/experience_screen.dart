@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grad2live_login/ui/video_screen.dart';
 
 class ExperienceScreen extends StatefulWidget {
   static const String id = "experience_screen";
@@ -449,44 +450,27 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 7.0),
-              child: Row(
-                children: <Widget>[
-                  Checkbox(
-                    value: checkBoxValue,
-                    checkColor: Colors.black,
-                    activeColor: Colors.deepOrange,
-                    onChanged: (bool value) {
-                      setState(() {
-                        checkBoxValue = value;
-                      });
-                    },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Container(
+                  alignment: Alignment.bottomRight,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.deepOrange,
                   ),
-                  Expanded(
+                  child: FlatButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, demoVideo.id);
+                    },
                     child: Text(
-                      "By creating an account, you agree to our terms & conditions and privacy policy",
-                      style: TextStyle(fontSize: 14.0, color: Colors.white),
+                      "Next",
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
-                ],
-              ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: 80.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: Colors.deepOrange,
-              ),
-              child: FlatButton(
-                onPressed: null,
-                child: Text(
-                  "Sign Up",
-                  style: TextStyle(color: Colors.white),
                 ),
-              ),
-            ),
+              ],
+            )
           ],
         ));
   }
